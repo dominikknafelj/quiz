@@ -9,6 +9,21 @@ package quiz;
  *
  * @author Dominik Knafelj <d.knafelj@gmail.com>
  */
-public class SchaetzFrage extends AbstrakteZahlenfrage {
+ class SchaetzFrage extends AbstrakteZahlenfrage {
+    
+    private int prozentualeAbweichung = 0;
+    
+    public SchaetzFrage(String frage, int punkte, int richtigeAntwort, int prozentualeAbweichung) {
+        super(frage, punkte);
+        this.loesung = richtigeAntwort;
+        this.prozentualeAbweichung = prozentualeAbweichung;
+    }
+    
+    @Override
+    public boolean istRichtigBeantwortet(){
+       int min = this.loesung * (100 - this.prozentualeAbweichung) / 100; 
+       int max = this.loesung * (100 + this.prozentualeAbweichung) / 100;
+       return (this.antwort >= min ) && (this.antwort <= max) && (this.istBeantwortet());
+    }
     
 }

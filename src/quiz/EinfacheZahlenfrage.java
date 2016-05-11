@@ -9,6 +9,10 @@ package quiz;
  *
  * @author Dominik Knafelj <d.knafelj@gmail.com>
  */
-public class EinfacheZahlenfrage extends AbstrakteZahlenfrage {
-    
+ class EinfacheZahlenfrage extends AbstrakteZahlenfrage {
+
+    public EinfacheZahlenfrage(String frage, int punkte, int richtigeAntwort) {
+        super(frage, punkte);
+        this.loesung = richtigeAntwort;
+    }  
 }

@@ -5,7 +5,7 @@ import java.util.Scanner;
  *
  * @author Dominik Knafelj <d.knafelj@gmail.com>
  */
-public class BeispielQuiz {
+class BeispielQuiz {
 
 public static void main(String[] args) {
 		Quiz q = new Quiz(4);
@@ -13,7 +13,7 @@ public static void main(String[] args) {
 		q.fuegeFrageHinzu(new SchaetzFrage("Wie hoch ist der Koelner Dom ungefaehr?", 5, 157, 5));
 		q.fuegeFrageHinzu(new EinfacheZahlenfrage("Was ist 2+5?", 1, 7));
 		q.fuegeFrageHinzu(new SchaetzFrage("Wie lange ist der Aequator ungefaehr?", 5, 40075, 5));
-		Quiz.start(q);
+		BeispielQuiz.start(q);
 	}
 	
 	public static void start(Quiz q) {
