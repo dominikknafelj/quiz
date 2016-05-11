@@ -21,8 +21,8 @@ package quiz;
     
     @Override
     public boolean istRichtigBeantwortet(){
-       int min = this.loesung * (100 - this.prozentualeAbweichung) / 100; 
-       int max = this.loesung * (100 + this.prozentualeAbweichung) / 100;
+       double min = this.loesung * (double)(100 - this.prozentualeAbweichung) / 100; 
+       double max = this.loesung * (double)(100 + this.prozentualeAbweichung) / 100;
        return (this.antwort >= min ) && (this.antwort <= max) && (this.istBeantwortet());
     }
     
