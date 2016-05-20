@@ -197,6 +197,7 @@ public class QuizTest extends TestCase {
 		};
 		assertEquals("Die Methode liefereMoeglichePunkte() liefert nicht dem im Konstruktor übergebenen Wert.", punkte, azf.liefereMoeglichePunkte());
 		assertEquals("Die Methode liefereFrage() liefert nicht dem im Konstruktor übergebenen Wert.", frage, azf.liefereFrage());
+                int x = azf.liefereErreichtePunkte();
 		assertEquals("Bei einer unbeantworteten Frage werden nicht 0 Punkte vergeben.", 0, azf.liefereErreichtePunkte());
 		assertFalse("Die Methode istBeantwortet() liefert bei einer unbeantworteten Frage true.", azf.istBeantwortet());
 		azf.legeAntwortFest(17);

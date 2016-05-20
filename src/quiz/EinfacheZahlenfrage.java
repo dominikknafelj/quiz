@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package quiz;
 
 /**
@@ -11,6 +6,12 @@ package quiz;
  */
  class EinfacheZahlenfrage extends AbstrakteZahlenfrage {
 
+    /**
+     * Konstruktor
+     * @param frage Fragestellung
+     * @param punkte maximal erreichbare Punkte
+     * @param richtigeAntwort integer Wert der richtigen Antwort
+     */
     public EinfacheZahlenfrage(String frage, int punkte, int richtigeAntwort) {
         super(frage, punkte);
         this.loesung = richtigeAntwort;
